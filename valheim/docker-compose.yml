@@ -1,0 +1,22 @@
+version: "3"
+
+services: 
+  valheim: 
+    image: ghcr.io/lloesche/valheim-server
+    container_name: valheim
+    cap_add:
+      - sys_nice
+    volumes: 
+      - valheim_config:/config
+      - valheim_data:/opt/valheim
+    network_mode: host
+    restart: always
+    stop_grace_period: 2m
+    
+volumes:
+  valheim-data:
+    external: true
+    name: 'valheim_data'
+  valheim-config:
+    external: true
+    name: 'valheim_config'
