@@ -26,11 +26,13 @@ services:
       - SSL_KEY_NAME=tls.key
       - TZ=Etc/UTC
     volumes:
-      - data:/opt/tplink/EAPController/data
-      - logs:/opt/tplink/EAPController/logs
+      - omada-data:/opt/tplink/EAPController/data
+      - omada-logs:/opt/tplink/EAPController/logs
 
 volumes:
-  data:
+  omada-data:
     external: true
-  logs:
+    name: 'omada_data'
+  omada-logs:
     external: true
+    name: 'omada_logs'
