@@ -4,7 +4,7 @@ services:
   valheim: 
     image: ghcr.io/lloesche/valheim-server
     container_name: valheim
-    env_file: stack.env
+    env_file: ../stack.env
     cap_add:
       - sys_nice
     volumes: 
