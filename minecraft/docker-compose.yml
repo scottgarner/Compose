@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  bds:
+    image: itzg/minecraft-bedrock-server
+    environment:
+      EULA: "TRUE"
+      GAMEMODE: survival
+      DIFFICULTY: normal
+    network_mode: host
+    volumes:
+      - minecraft:/data
+    stdin_open: true
+    tty: true
+
+volumes:
+  minecraft:
+    external: true
+    name: "minecraft"
