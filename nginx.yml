@@ -8,7 +8,7 @@ services:
         volumes:
             - nginx:/usr/share/nginx
             
-nginx:
-  homebridge:
+volumes:
+  nginx:
     external: true
     name: "nginx"        
