@@ -8,8 +8,4 @@ services:
     environment:
       - HOMEBRIDGE_CONFIG_UI_PORT=8581
     volumes:
-      - homebridge:/homebridge
-volumes:
-  homebridge:
-    external: true
-    name: "homebridge"
+      - /mnt/docker/homebridge:/homebridge
