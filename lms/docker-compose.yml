@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  lms:
+    image: epoupon/lms:latest
+    container_name: lms
+    user: 1030:1000
+    restart: unless-stopped
+    ports:
+      - 5082:5082
+    volumes:
+      - /mnt/docker/lms/data:/var/lms
+      - /mnt/music:/music:ro
