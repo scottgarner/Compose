@@ -3,6 +3,7 @@ services:
   factorio:
     image: factoriotools/factorio
     container_name: factoriotools
+    user: 1030:845
     ports:
      - "34197:34197/udp"
      - "27015:27015/tcp"
