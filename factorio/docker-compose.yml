@@ -8,4 +8,7 @@ services:
      - "34197:34197/udp"
      - "27015:27015/tcp"
     volumes:
-     - /mnt/docker/factorio:/factorio
+     - /mnt/docker/factorio:/factorio 
+    environment:
+     - PUID=1030
+     - PGID=1000
