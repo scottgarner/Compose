@@ -2,7 +2,7 @@ version: '2'
 services:
   factorio:
     image: factoriotools/factorio
-    container_name: factoriotools
+    container_name: factorio
     user: 1030:845
     ports:
      - "34197:34197/udp"
