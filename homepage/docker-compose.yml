@@ -3,9 +3,6 @@ services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
-    environment:
-      PUID: 1030
-      PGID: 100
     ports:
       - 3000:3000
     volumes:
