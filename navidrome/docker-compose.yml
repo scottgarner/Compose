@@ -8,5 +8,5 @@ services:
       - "4533:4533"
     restart: unless-stopped
     volumes:
-      - "/mnt/navidrome/data:/data"
-      - "/mnt/music/:/music:ro"
+      - "/mnt/docker/navidrome:/data"
+      - "/mnt/music:/music:ro"
