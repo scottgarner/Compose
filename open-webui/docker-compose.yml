@@ -7,6 +7,4 @@ services:
     ports:
       - "4000:8080"
     volumes:
-      - open-webui:/app/backend/data
-volumes:
-  open-webui: /mnt/docker/open-webui
+      - /mnt/docker/open-webui:/app/backend/data
