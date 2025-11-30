@@ -7,13 +7,13 @@ services:
     image: codeberg.org/forgejo/forgejo:13
     container_name: forgejo
     environment:
-      - USER_UID=1000
-      - USER_GID=1000
+      - USER_UID=1030
+      - USER_GID=65536
     restart: always
     networks:
       - forgejo
     volumes:
-      - ./forgejo:/data
+      - /mnt/docker/forgejo:/data
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
